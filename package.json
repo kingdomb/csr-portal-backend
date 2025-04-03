@@ -1,0 +1,16 @@
+{
+  "name": "csr-backend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace auth-service\" \"npm run dev --workspace user-service\" \"npm run dev --workspace subscription-service\"",
+    "start": "concurrently \"npm run start --workspace auth-service\" \"npm run start --workspace user-service\" \"npm run start --workspace subscription-service\""
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "concurrently": "^7.0.0"
+  }
+}
