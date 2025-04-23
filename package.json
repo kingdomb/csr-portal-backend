@@ -6,8 +6,8 @@
     "services/*"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev --workspace auth-service\" \"npm run dev --workspace user-service\" \"npm run dev --workspace subscription-service\"",
-    "start": "concurrently \"npm run start --workspace auth-service\" \"npm run start --workspace user-service\" \"npm run start --workspace subscription-service\""
+    "dev": "concurrently \"npm run dev --workspace services/api-gateway\" \"npm run dev --workspace auth-service\" \"npm run dev --workspace user-service\" \"npm run dev --workspace subscription-service\"",
+    "start": "concurrently \"npm run start --workspace services/api-gateway\" \"npm run start --workspace auth-service\" \"npm run start --workspace user-service\" \"npm run start --workspace subscription-service\""
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
